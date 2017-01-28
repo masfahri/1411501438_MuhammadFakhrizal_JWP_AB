@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="menu.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>        
+
+    </head>
+    <body class="bodd">
+        <div class="panel-perusahaan">
+            <h1>FORM PERUSAHAAN</h1>
+            <form method="post" action="ServletCompany">
+                <div class="form-group">
+                    <label>Nama Perusahaan : </label>
+                    <input class="form-control" type="text" name="naper">
+                    <input style="float: right; margin-top: -34px; padding: 5px;" type="submit" name="search" value="Search">
+                </div>
+                <div class="form-group">
+                    <label>No Siup:</label>
+                    <input type="text" name="siup" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>No Telp: </label>
+                    <input type="text" name="notelp" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Pemilik: </label>
+                    <input type="text" name="napem" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Alamat: </label>
+                    <textarea class="form-control" name="alamat"></textarea>
+                </div>
+                <button type="submit" name="save" class="btn btn-success">Save</button>
+                <button type="submit" name="edit" class="btn btn-default">Edit</button>
+                <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    
+    </body>
+</html>

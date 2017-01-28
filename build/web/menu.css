@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 15, 2016, 7:19:37 PM
+    Author     : Anounymous
+*/
+.bodd {
+    background: #eee;
+}
+.panell {
+    background: #fff;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: -5%;
+    width: 30%;
+    padding: 10px;
+    height: auto;
+    padding-top: 5%;
+    box-shadow: 4px 4px 5px 0px #888888;
+}
+
+.box {
+    margin-top: 50px;
+}
+
+.session {
+    background: #fff;
+    margin: auto;
+    width: 25%;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.menu {
+    padding: 10px;
+    background: #eee;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.menu:hover {
+    background: #e2e2e2;
+}
+
+.menu:active {
+    background: #fff;
+}
+
+.profile {
+    margin-bottom: -40px;
+    text-align: center;
+}
+
+.panel-perusahaan {
+    background: #fff;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 5%;
+    width: 30%;
+    padding: 20px;
+    height: auto;
+    box-shadow: 4px 4px 5px 0px #888888;
+}
+
+.panel-pengaduan {
+    background: #fff;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 2%;
+    width: 36%;
+    padding: 20px;
+    height: auto;
+    box-shadow: 4px 4px 5px 0px #888888;
+}
+
+.panel-list {
+    background: #fff;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    box-shadow: 4px 4px 5px 0px #888888;
+}
