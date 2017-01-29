@@ -96,7 +96,7 @@ public class Fungsi_Query {
                 }
         }
         
-        Pengaduan obj = new Pengaduan();
+        Smartcity obj = new Smartcity();
         public String Search(String primarykey, String isi, String nmtable) {
                 String data="";
                 try {
@@ -104,16 +104,15 @@ public class Fungsi_Query {
                         Class.forName(driver);
                         Connection conn = DriverManager.getConnection(database, user, pass);
                         Statement stt   = conn.createStatement();
-                        ResultSet rs       = stt.executeQuery(sql);
+                        ResultSet rs    = stt.executeQuery(sql);
                         if (rs.next()) {
-                                obj.setNotelp(rs.getString(1));
-                                obj.setNapel(rs.getString(2));
-                                obj.setUraian(rs.getString(3));
-                                obj.setPihak(rs.getString(4));
-                                obj.setJabatan(rs.getString(5));
-                                obj.setKlarifikasi(rs.getString(6));
-                                obj.setLembaga(rs.getString(7));
-                                obj.setUpload(rs.getString(8));
+                            obj.setSc_nik(rs.getString(1));
+                            obj.setSc_nama(rs.getString(2));
+                            obj.setSc_alamat(rs.getString(3));
+                            obj.setSc_keperluan(rs.getString(4));
+                            obj.setSc_ijazah(rs.getString(5));
+                            obj.setSc_foto(rs.getString(6));
+                            obj.setSc_pengantar(rs.getString(7));
                         }
                         rs.close();
                         stt.close();
@@ -121,6 +120,6 @@ public class Fungsi_Query {
                 }catch (Exception e) {
                         System.out.println(e.getMessage());
                 }
-                return obj.getNotelp()+", "+obj.getNapel()+", "+obj.getUraian()+", "+obj.getPihak()+", "+obj.getJabatan()+", "+obj.getKlarifikasi()+", "+obj.getLembaga()+", "+obj.getUpload();
+                return obj.getSc_nik()+", "+obj.getSc_nama()+", "+obj.getSc_alamat()+", "+obj.getSc_keperluan()+", "+obj.getSc_ijazah()+", "+obj.getSc_foto()+", "+obj.getSc_pengantar();
         }
 }

@@ -1,9 +1,11 @@
+<%-- 
+    Document   : tpl_smartcity
+    Created on : Jan 29, 2017, 10:26:05 PM
+    Author     : fuckhrizal
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -19,21 +21,21 @@ and open the template in the editor.
             <form action="ServletPelayanan" method="post" >
                 <div class="form-group">
                     <label for="exampleInputEmail1">No Induk Kependudukan</label>
-                    <input name="sc_nik"  class="form-control" id="exampleInputEmail1" placeholder="Masukan NIK">
+                    <input name="sc_nik" value="${sc_nik}" class="form-control" id="exampleInputEmail1" placeholder="Masukan NIK">
                     <input style="float: right; margin-top: -34px; padding: 5px;" type="submit" name="search" value="Search">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Lengkap</label>
-                    <input name="sc_nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap">
+                    <input name="sc_nama" name="${sc_nama}" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
-                    <textarea name="sc_alamat" class="form-control" id="exampleInputEmail1" placeholder="Alamat Lengkap"></textarea>
+                    <textarea name="sc_alamat" value="${sc_alamat}" class="form-control" id="exampleInputEmail1" placeholder="Alamat Lengkap"></textarea>
                 </div>
                 <div class="">
                     <div class="">
                         <label for="exampleInputEmail1">Pelayanan</label>
-                        <select name="sc_keperluan" class="form-control">
+                        <select name="sc_keperluan" value="${sc_keperluan}" class="form-control">
                             <option>Pilih Pelayanan</option>
                             <option value="ktp">KTP</option>
                             <option value="kk">KK</option>
