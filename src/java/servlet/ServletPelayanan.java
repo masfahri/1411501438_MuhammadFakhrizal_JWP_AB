@@ -76,7 +76,7 @@ public class ServletPelayanan extends HttpServlet {
     String[] kolom      = new String [7];
     String[] isi      = new String [7];
     
-    protected String[] kolom() {
+    protected String[] Kolom() {
         kolom[0] = "sc_nik";
         kolom[1] = "sc_nama";
         kolom[2] = "sc_alamat";
@@ -112,7 +112,11 @@ public class ServletPelayanan extends HttpServlet {
             obj.setSc_pengantar(request.getParameter("sc_pengantar"));
             
             if (request.getParameter("save") != null) {
-                query.Input(kolom(), Data(), "smartcity");
+                query.Input(Kolom(), Data(), "smartcity");
+                out.println("<div class='alert alert-success'>SUKSES INSERT DATA</span></div> ");
+                request.getRequestDispatcher("smartcity.html").include(request, response);
+
+//                response.sendRedirect("smartcity.html");  
             }else if(request.getParameter("search") != null) {
                 String hasilcari = query.Search("sc_nik", request.getParameter("sc_nik"), "smartcity");
                 String [] data2  = hasilcari.split(",");
@@ -125,6 +129,14 @@ public class ServletPelayanan extends HttpServlet {
                 request.setAttribute("sc_pengantar", data2[6]);
                 RequestDispatcher rd = request.getRequestDispatcher("tpl_smartcity.jsp");
                 rd.forward(request, response);
+            }else if (request.getParameter("edit") != null) {
+                query.Ubah(Kolom(), Data(), "smartcity", kolom[0], isi[0]);
+                out.println("<div class='alert alert-success'>SUKSES EDIT DATA</span></div> ");
+                request.getRequestDispatcher("smartcity.html").include(request, response);
+            }else if (request.getParameter("delete") != null) {
+                query.Delete("sc_nik", isi[0], "smartcity");
+                out.println("<div class='alert alert-danger'>SUKSES DELETE DATA</span></div> ");
+                request.getRequestDispatcher("smartcity.html").include(request, response);
             }
     }
 

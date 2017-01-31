@@ -21,44 +21,41 @@
             <form action="ServletPelayanan" method="post" >
                 <div class="form-group">
                     <label for="exampleInputEmail1">No Induk Kependudukan</label>
-                    <input name="sc_nik" value="${sc_nik}" class="form-control" id="exampleInputEmail1" placeholder="Masukan NIK">
+                    <input type="text" value="${sc_nik}" class="form-control" name="sc_nik">
                     <input style="float: right; margin-top: -34px; padding: 5px;" type="submit" name="search" value="Search">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama Lengkap</label>
-                    <input name="sc_nama" name="${sc_nama}" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap">
+                    <input type="text" value="${sc_nama}" class="form-control" name="sc_nama">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Alamat</label>
-                    <textarea name="sc_alamat" value="${sc_alamat}" class="form-control" id="exampleInputEmail1" placeholder="Alamat Lengkap"></textarea>
+                    <textarea name="sc_alamat" value="" class="form-control" id="exampleInputEmail1" placeholder="Alamat Lengkap">${sc_alamat}</textarea>
                 </div>
                 <div class="">
                     <div class="">
                         <label for="exampleInputEmail1">Pelayanan</label>
                         <select name="sc_keperluan" value="${sc_keperluan}" class="form-control">
-                            <option>Pilih Pelayanan</option>
-                            <option value="ktp">KTP</option>
-                            <option value="kk">KK</option>
-                            <option value="akte">AKTE</option>
+                            <option value="${sc_keperluan}">${sc_keperluan}</option>
                         </select>
                     </div>
                 </div><br>
                 <div class="">
                     <div class="">
                         <label> Upload Ijazah <small>(max < 500kb)</small></label>
-                        <input type="file" name="sc_ijazah"  />
+                        <input type="file" name="sc_ijazah"  />${sc_ijazah}
                     </div>
                 </div><br>
                 <div class="">
                     <div class="">
                         <label> Upload Foto <small>(max < 500kb)</small></label>
-                        <input type="file" name="sc_foto"  />
+                        <input type="file" name="sc_foto"  />${sc_foto}
                     </div>
                 </div><br>
                 <div class="">
                     <div class="">
                         <label> Upload Pengantar <small>(max < 500kb)</small></label>
-                        <input type="file" name="sc_pengantar"  />
+                        <input type="file" name="sc_pengantar"  />${sc_pengantar}
                     </div>
                 </div><br>
                 <div class="pull-right">
@@ -67,6 +64,8 @@
                     <button type="submit" name="save" class="btn btn-success">Save</button>
                 </div>
             </form>
+            <button type="button" name="back" onclick="history.back()">back</button>
+            <a type="button"  href="login.jsp">menu</a>
         </div>
     </body>
 </html>

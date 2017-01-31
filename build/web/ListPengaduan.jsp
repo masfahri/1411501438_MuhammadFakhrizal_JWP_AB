@@ -37,14 +37,14 @@
                 <table class="table">
                 <thead>
                     <tr>
-                      <th>Notelp</th>
-                      <th>Nama Pelapor</th>
-                      <th>Uraian</th>
-                      <th>Pihak</th>
-                      <th>Jabatan</th>
-                      <th>Klarifikasi</th>
-                      <th>Lembaga</th>
-                      <th>upload</th>
+                      <th>NIK</th>
+                      <th>Nama Lengkap</th>
+                      <th>Alamat</th>
+                      <th>Keperluan</th>
+                      <th>Ijazah</th>
+                      <th>Foto</th>
+                      <th>Pengantar</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                 <tbody>
@@ -54,7 +54,6 @@
                         do
                         {%>
                 <tr>
-                    <td><a href="#" onclick="get()"><%=rs.getString("id")%></a></td>
                     <td><%=rs.getString("sc_nik")%></td>
                     <td><%=rs.getString("sc_nama")%></td>
                     <td><%=rs.getString("sc_alamat")%></td>
@@ -62,6 +61,7 @@
                     <td><%=rs.getString("sc_ijazah")%></td>
                     <td><%=rs.getString("sc_foto")%></td>
                     <td><%=rs.getString("sc_pengantar")%></td>
+                    <td><a href="tpl_smartcity">test</a></td>
                 </tr>
                         <% }while( rs.next() );
                     }else{%>
