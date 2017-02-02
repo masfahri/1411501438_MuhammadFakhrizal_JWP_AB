@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jan 28, 2017 at 04:59 AM
+-- Generation Time: Feb 02, 2017 at 11:15 AM
 -- Server version: 10.1.9-MariaDB-log
 -- PHP Version: 5.6.16
 
@@ -197,6 +197,31 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
 (2, 'Jawa Tengah'),
 (3, 'Jawa Barat');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `smartcity`
+--
+
+CREATE TABLE `smartcity` (
+  `sc_nik` varchar(255) NOT NULL,
+  `sc_nama` varchar(255) NOT NULL,
+  `sc_alamat` varchar(255) NOT NULL,
+  `sc_keperluan` varchar(255) NOT NULL,
+  `sc_ijazah` varchar(255) DEFAULT NULL,
+  `sc_foto` varchar(255) DEFAULT NULL,
+  `sc_pengantar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `smartcity`
+--
+
+INSERT INTO `smartcity` (`sc_nik`, `sc_nama`, `sc_alamat`, `sc_keperluan`, `sc_ijazah`, `sc_foto`, `sc_pengantar`) VALUES
+('1', 'lorem', 'jauh', 'akte', '1', '2', NULL),
+('2', 'ipsum', 'deket', 'ktp', 'STATDAS2 (1).docx', 'FIKRI ZAIN_3215126551.pdf', 'Naskah Soal SBMPTN 2015 Tes Kemampuan Dasar Sains dan Teknologi (TKD Saintek) Kode Soal 522 by [pak-anang.blogspot.com].pdf'),
+('3', '3', '3', 'ktp', NULL, NULL, NULL);
+
 --
 -- Indexes for dumped tables
 --
@@ -243,6 +268,12 @@ ALTER TABLE `pengaduan`
 --
 ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_provinsi`);
+
+--
+-- Indexes for table `smartcity`
+--
+ALTER TABLE `smartcity`
+  ADD PRIMARY KEY (`sc_nik`);
 
 --
 -- AUTO_INCREMENT for dumped tables
