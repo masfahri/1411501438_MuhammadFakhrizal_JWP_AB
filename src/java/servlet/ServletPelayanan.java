@@ -6,6 +6,7 @@ package servlet;
  * and open the template in the editor.
  */
 
+import com.oreilly.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -100,17 +101,17 @@ public class ServletPelayanan extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
+                response.setContentType("text/html;charset=UTF-8");
+                PrintWriter out = response.getWriter();
+//                MultipartRequest m=new MultipartRequest(request, "D:/FakhriPunya/java/1411501438_MuhammadFakhrizal_JWP_AB/upload", 10000000);
             
-            obj.setSc_nik(request.getParameter("sc_nik"));
-            obj.setSc_nama(request.getParameter("sc_nama"));
-            obj.setSc_alamat(request.getParameter("sc_alamat"));
-            obj.setSc_keperluan(request.getParameter("sc_keperluan"));
-            obj.setSc_ijazah(request.getParameter("sc_ijazah"));
-            obj.setSc_foto(request.getParameter("sc_foto"));
-            obj.setSc_pengantar(request.getParameter("sc_pengantar"));
-            
+                obj.setSc_nik(request.getParameter("sc_nik"));
+                obj.setSc_nama(request.getParameter("sc_nama"));
+                obj.setSc_alamat(request.getParameter("sc_alamat"));
+                obj.setSc_keperluan(request.getParameter("sc_keperluan"));
+                obj.setSc_ijazah(request.getParameter("sc_ijazah"));
+                obj.setSc_foto(request.getParameter("sc_foto"));
+                obj.setSc_pengantar(request.getParameter("sc_pengantar"));
             if (request.getParameter("save") != null) {
                 query.Input(Kolom(), Data(), "smartcity");
                 out.println("<div class='alert alert-success'>SUKSES INSERT DATA</span></div> ");

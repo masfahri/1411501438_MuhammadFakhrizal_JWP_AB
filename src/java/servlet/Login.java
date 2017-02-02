@@ -88,29 +88,29 @@ public class Login extends HttpServlet {
          */
          protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        
-        String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        
-        
-        if(Validate.checkUser(user, pass)&& pass.equals("admin")) {            
-                out.print("<div class='session'><h2>Welcome, "+pass+"</h2></div>");  
-                HttpSession session=request.getSession();  
-                session.setAttribute("user",pass);  
-                request.getRequestDispatcher("ListPengaduan.jsp").include(request, response);
-                
-        } else if(Validate.checkUser(user, pass)&& pass.equals("user")) {
-           out.print("<div class='session'><h2>Welcome, "+pass+"</h2></div>");  
-           HttpSession session=request.getSession();  
-           session.setAttribute("user",pass);  
-           request.getRequestDispatcher("login.jsp").include(request, response);
-        } else {
-           out.println("<div class='alert' >Salah</div>");
-           RequestDispatcher rs = request.getRequestDispatcher("index.html");
-           rs.include(request, response);
-        }
-        out.close();
+                PrintWriter out = response.getWriter();
+
+                String user = request.getParameter("user");
+                String pass = request.getParameter("pass");
+
+
+                if(Validate.checkUser(user, pass)&& pass.equals("admin")) {            
+                        out.print("<div class='session'><h2>Welcome, "+pass+"</h2></div>");  
+                        HttpSession session=request.getSession();  
+                        session.setAttribute("user",pass);  
+                        request.getRequestDispatcher("ListPengaduan.jsp").include(request, response);
+
+                } else if(Validate.checkUser(user, pass)&& pass.equals("user")) {
+                   out.print("<div class='session'><h2>Welcome, "+pass+"</h2></div>");  
+                   HttpSession session=request.getSession();  
+                   session.setAttribute("user",pass);  
+                   request.getRequestDispatcher("login.jsp").include(request, response);
+                } else {
+                   out.println("<div class='alert' >Salah</div>");
+                   RequestDispatcher rs = request.getRequestDispatcher("index.html");
+                   rs.include(request, response);
+                }
+                out.close();
     }  
 
         /**

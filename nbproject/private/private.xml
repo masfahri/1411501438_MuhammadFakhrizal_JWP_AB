@@ -12,15 +12,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/Login.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/ServletCompany.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/ServletPelayanan.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/jdbc/koneksi.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/web/login.jsp</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/Fungsi_Query.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/web/pengaduan.html</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/ServletPengaduan.java</file>
-            <file>file:/H:/jwp/REMED/1411501438_MuhammadFakhrizal_JWP_AB/web/smartcity.html</file>
+            <file>file:/D:/FakhriPunya/java/1411501438_MuhammadFakhrizal_JWP_AB/src/java/servlet/ServletPelayanan.java</file>
+            <file>file:/D:/FakhriPunya/java/1411501438_MuhammadFakhrizal_JWP_AB/web/ListPengaduan.jsp</file>
+            <file>file:/D:/FakhriPunya/java/1411501438_MuhammadFakhrizal_JWP_AB/web/tpl_smartcity.jsp</file>
+            <file>file:/D:/FakhriPunya/java/1411501438_MuhammadFakhrizal_JWP_AB/web/smartcity.html</file>
         </group>
     </open-files>
 </project-private>

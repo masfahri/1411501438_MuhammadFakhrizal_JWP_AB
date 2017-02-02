@@ -16,10 +16,12 @@
         <link href="menu.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>   
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
         <title>JSP Page</title>
     </head>
     <body class="bodd">
-        <a href="Login">Logout</a>
+       
         <div class="panel-list" id="hilang">
             <div class="table-responsive"> 
                 <%
@@ -34,7 +36,8 @@
                         String Data = "select * from smartcity";
                         rs = statement.executeQuery(Data);
                 %>
-                <table class="table">
+                <div class="table-responsive">
+                <table class="table" id="listSiswa">
                 <thead>
                     <tr>
                       <th>NIK</th>
@@ -58,10 +61,34 @@
                     <td><%=rs.getString("sc_nama")%></td>
                     <td><%=rs.getString("sc_alamat")%></td>
                     <td><%=rs.getString("sc_keperluan")%></td>
-                    <td><%=rs.getString("sc_ijazah")%></td>
-                    <td><%=rs.getString("sc_foto")%></td>
-                    <td><%=rs.getString("sc_pengantar")%></td>
-                    <td><a href="tpl_smartcity">test</a></td>
+                    <td><% if (rs.getString("sc_ijazah") == null) {
+                                out.print("<span class='label label-danger'>Belum Upload File</span>");  
+                            }else{
+                                out.print(rs.getString("sc_ijazah"));
+                            }
+                        %>
+                    </td>
+                    <td><% if (rs.getString("sc_foto") == null) {
+                                out.print("<span class='label label-danger'>Belum Upload File</span>");  
+                            }else{
+                                out.print(rs.getString("sc_foto"));
+                            }
+                        %>
+                    </td>
+                    
+                    <td><% if (rs.getString("sc_pengantar") == null) {
+                                out.print("<span class='label label-danger'>Belum Upload File</span>");  
+                            }else{
+                                out.print(rs.getString("sc_pengantar"));
+                            }
+                        %>
+                    </td>
+                    <td><% if (rs.getString("sc_ijazah")== null || rs.getString("sc_pengantar")== null || rs.getString("sc_foto")== null) {
+                                out.print("<button type='button' class='btn btn-danger btn-xs disabled'>Data Belum <br>valid</button>");
+                            }else{
+                                out.print("<button type='button' class='btn btn-success btn-xs'>Cetak Nomor Antrian</button>");
+                            }
+                        %></td>
                 </tr>
                         <% }while( rs.next() );
                     }else{%>
@@ -78,6 +105,7 @@
                     <%} %>
                 </tbody>
                 </table>
+                </div>
                   <%
                         rs.close();
                         statement.close();
@@ -88,5 +116,14 @@
                     %>
             </div>
         </div>
+            <br>
+             <a href="Login" class="pull-right" style="margin-right: 30px;">Logout</a>
     </body>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#listSiswa').DataTable();
+        } );
+    </script>
 </html>
+    
